@@ -1,0 +1,175 @@
+
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuF6AZ9hiA.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGfAZ9hiA.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 500;
+            src: url('https://fonts.gstatic.com/s/rajdhani/v11/LDIxapCSOBg7S-QT4q7c0v2g.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 700;
+            src: url('https://fonts.gstatic.com/s/rajdhani/v11/LDIxapCSOBg7S-QT4q7c0v2g.woff2') format('woff2');
+        }
+
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+                              linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.3);
+        }
+
+        .running-text {
+            background: rgba(249, 115, 22, 0.1);
+            padding: 12px 20px;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            border-radius: 12px;
+            font-weight: 600;
+            color: #F97316;
+            font-size: 0.95rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.15);
+            display: block;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        marquee {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        .animate-count {
+            display: inline-block;
+            min-width: 100px;
+            font-weight: bold;
+            color: #F59E0B;
+        }
+
+        /* Partikel */
+        #particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .particle {
+            position: absolute;
+            background: #F97316;
+            border-radius: 50%;
+            opacity: 0.6;
+            box-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+            pointer-events: none;
+        }
+
+        /* Login Overlay */
+        #login-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        #login-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        #login-box {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 40px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(249, 115, 22, 0.3);
+        }
+
+        /* Animasi floating untuk gambar login */
+        @keyframes float-login {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+        .login-image {
+            animation: float-login 6s ease-in-out infinite;
+            margin: 30px 0;
+            max-width: 80%;
+        }
+
+        /* Tombol mute/unmute musik */
+        #music-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid #334155;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+            transition: all 0.3s ease;
+        }
+        #music-toggle:hover {
+            background: rgba(249, 115, 22, 0.2);
+            transform: scale(1.1);
+        }
+
+        /* Pesan error & warning */
+        #error-message {
+            color: #ef4444;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+        #warning-message {
+            color: #3b82f6;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+    
