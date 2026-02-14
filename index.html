@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <!-- Meta Tags Dasar -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANZZ KIPAS | DOWNLOAD KIPAS-PS</title>
+    <meta name="description" content="Download Kipas Private Server latest version v2.118.12. Unlock all premium items, unlimited currency, rank support, and custom features.">
+    <meta name="keywords" content="kipas server, private server, unlimited money, mod menu">
+    <meta name="author" content="Kipas Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ffkipas.my.id/">
+
+    <!-- Open Graph & Twitter Card -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ffkipas.my.id/">
+    <meta property="og:title" content="Kipas Private Server - Download Ultimate MOD">
+    <meta property="og:description" content="Join Kipas Private Server now! Get unlimited resources, unlock all collectibles, and play competitive matches.">
+    <meta property="og:image" content="assets/images/ffkipas.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kipas Private Server - Go Go Go!">
+    <meta name="twitter:description" content="Download the best Private Server. Unlimited resources and full access to all features.">
+    <meta name="twitter:image" content="assets/images/ffkipas.png">
+    <link rel="icon" type="image/png" href="image.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Rajdhani', 'sans-serif'],
+                    },
+                    colors: {
+                        kps: {
+                            main: '#0f172a',
+                            panel: '#1e293b',
+                            border: '#334155',
+                            orange: '#F97316',
+                            orangeDark: '#EA580C',
+                            glow: 'rgba(249, 115, 22, 0.25)'
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-kps': 'linear-gradient(135deg, #F97316 0%, #EA580C 100%)',
+                        'gradient-text': 'linear-gradient(to right, #FB923C, #EA580C)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuF6AZ9hiA.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGfAZ9hiA.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 500;
+            src: url('https://fonts.gstatic.com/s/rajdhani/v11/LDIxapCSOBg7S-QT4q7c0v2g.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Rajdhani';
+            font-style: normal;
+            font-weight: 700;
+            src: url('https://fonts.gstatic.com/s/rajdhani/v11/LDIxapCSOBg7S-QT4q7c0v2g.woff2') format('woff2');
+        }
+
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+                              linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.3);
+        }
+
+        .running-text {
+            background: rgba(249, 115, 22, 0.1);
+            padding: 12px 20px;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            border-radius: 12px;
+            font-weight: 600;
+            color: #F97316;
+            font-size: 0.95rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.15);
+            display: block;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        marquee {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        .animate-count {
+            display: inline-block;
+            min-width: 100px;
+            font-weight: bold;
+            color: #F59E0B;
+        }
+
+        /* Partikel */
+        #particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .particle {
+            position: absolute;
+            background: #F97316;
+            border-radius: 50%;
+            opacity: 0.6;
+            box-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+            pointer-events: none;
+        }
+
+        /* Login Overlay */
+        #login-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        #login-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        #login-box {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 40px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(249, 115, 22, 0.3);
+        }
+
+        /* Animasi floating untuk gambar login */
+        @keyframes float-login {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+        .login-image {
+            animation: float-login 6s ease-in-out infinite;
+            margin: 30px 0;
+            max-width: 80%;
+        }
+
+        /* Tombol mute/unmute musik */
+        #music-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid #334155;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+            transition: all 0.3s ease;
+        }
+        #music-toggle:hover {
+            background: rgba(249, 115, 22, 0.2);
+            transform: scale(1.1);
+        }
+
+        /* Pesan error & warning */
+        #error-message {
+            color: #ef4444;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+        #warning-message {
+            color: #3b82f6;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-kps-main text-slate-300 font-sans selection:bg-kps-orange selection:text-white">
+
+    <!-- Background Grid Overlay -->
+    <div class="fixed inset-0 bg-grid -z-10 pointer-events-none opacity-30"></div>
+
+    <!-- Partikel Container -->
+    <div id="particles-container"></div>
+
+    <!-- Audio Background Music (hidden) -->
+    <audio id="bg-music" loop>
+        <source src="v4.www-y2mate.blog - Garena Free Fire La Casa De Papel - My Life Is Going On Song (320 KBps).mp3" type="audio/mpeg">
+        <!-- Ganti link ini dengan musik Free Fire atau lagu favorit kamu (format .mp3) -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Tombol Mute/Unmute Musik -->
+    <div id="music-toggle" title="Klik untuk mute/unmute musik">
+        <i id="music-icon" class="fas fa-volume-up text-white text-2xl"></i>
+    </div>
+
+    <!-- LOGIN OVERLAY -->
+    <div id="login-overlay">
+        <div id="login-box">
+            <h2 class="font-tech text-4xl md:text-5xl font-bold text-white mb-6">
+                DANZZ <span class="text-transparent bg-clip-text bg-gradient-kps">KIPAS</span>
+            </h2>
+
+            <img src="img/8ba9d082f7b34ab77bc3cdd264529999.png" alt="Danzz Kipas Character" class="login-image mx-auto">
+
+            <p class="text-slate-400 mb-8 text-lg">Masukkan nama kamu untuk Download FFKIPAS. Bebas juga gapapa!</p>
+            <input type="text" id="username-input" placeholder="Nama kamu bebas..." class="w-full px-6 py-4 bg-kps-panel border border-kps-border rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-kps-orange mb-4 text-lg">
+            
+            <div id="error-message">Nama tidak diperbolehkan! Gunakan kata yang sopan.</div>
+            <div id="warning-message">Jangan masukin angka mas/mbak. Login pake nama mu!</div>
+            
+            <button id="login-btn" class="w-full bg-gradient-kps text-white font-bold py-4 rounded-lg hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] transition text-lg">
+                LOGIN
+            </button>
+            <p class="text-xs text-slate-500 mt-6">Tidak ada password • Nama bebas • Hanya untuk identitas Player.</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 bg-kps-main/90 backdrop-blur-md border-b border-kps-border/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <img src="image.png" alt="Server Logo" class="h-10 w-auto rounded" onerror="this.src='https://placehold.co/100x100/F97316/white?text=KPS'">
+                    <span class="font-tech font-bold text-xl md:text-2xl tracking-widest text-white">
+                        ADEN <span class="text-transparent bg-clip-text bg-gradient-text">KIPAS</span>
+                    </span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <span class="text-slate-300 text-sm hidden md:block">
+                        Halo, <span id="username-display" class="text-kps-orange font-bold">Guest</span>!
+                    </span>
+                    <button id="logout-btn" class="text-slate-400 hover:text-kps-orange text-sm font-bold hidden">
+                        <i class="fas fa-sign-out-alt mr-1"></i> LOGOUT
+                    </button>
+                    <div class="hidden md:flex items-center gap-8">
+                        <a href="#home" class="text-slate-400 hover:text-kps-orange text-sm font-semibold transition uppercase">Home</a>
+                        <a href="#features" class="text-slate-400 hover:text-kps-orange text-sm font-semibold transition uppercase">Features</a>
+                        <div class="flex gap-4">
+                            <a href="/verifyuid" class="border border-kps-border bg-kps-panel px-5 py-2 text-sm font-bold rounded hover:border-kps-orange hover:text-kps-orange transition">
+                                VERIFY ID
+                            </a>
+                            <a href="/panel" class="bg-white text-kps-main px-5 py-2 text-sm font-bold rounded hover:bg-kps-orange hover:text-white transition">
+                                PANEL
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn" class="text-white hover:text-kps-orange">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-kps-panel border-b border-kps-border">
+        <div class="px-4 py-4 space-y-3">
+            <a href="/verifyuid" class="block text-slate-300 hover:text-kps-orange font-bold">VERIFY ID</a>
+            <a href="/panel" class="block text-slate-300 hover:text-kps-orange font-bold">ACCOUNT PANEL</a>
+            <a href="/download" class="block text-kps-orange font-bold">DOWNLOAD APK</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 text-center max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-8 relative">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-kps-panel border border-kps-border">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                <span class="text-xs font-bold text-slate-300 tracking-wider">STATUS: <span class="text-emerald-400">ONLINE</span></span>
+            </div>
+
+            <div class="inline-flex items-center gap-4">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-kps-panel border border-kps-border">
+                    <i class="fas fa-code-branch text-kps-orange text-xs"></i>
+                    <span class="text-xs font-bold text-slate-300 tracking-wider">VER: <span class="text-white">2.118.12</span></span>
+                </div>
+
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-kps-panel border border-kps-border">
+                    <i class="fas fa-eye text-kps-orange text-xs"></i>
+                    <span class="text-xs font-bold text-slate-300 tracking-wider">DIKUNJUNGI : 
+                        <span class="animate-count" data-target="59215">0</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="font-tech text-4xl md:text-7xl font-bold uppercase leading-none tracking-tighter mb-4 text-white">
+            KIPAS <span class="text-transparent bg-clip-text bg-gradient-kps">PRIVATE SERVER</span>
+        </h1>
+
+        <div class="bg-kps-panel border border-kps-border rounded-lg px-6 py-4 mb-8 max-w-md mx-auto shadow-lg">
+            <div class="text-center">
+                <div class="text-slate-500 text-sm font-bold uppercase tracking-wider mb-2">BERHASIL DOWNLOAD</div>
+                <div class="font-tech text-5xl md:text-6xl font-bold text-yellow-500 animate-count" data-target="4218">0</div>
+            </div>
+        </div>
+
+        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+            Jalan pintas buat Download <strong>KIPAS PRIVATE SERVER</strong>. Semoga berguna hehe. Ayo Main dan JedagJedug! gunakan #ffkipas
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-4 w-full md:w-auto flex-wrap mb-8">
+            <a href="https://www.mediafire.com/file/z252izjvgvt605z/FFKIPAS_FREE.apk/file?dkey=hnvujprxrbs&r=1693" class="group relative bg-gradient-kps text-white px-8 py-4 rounded font-bold text-lg hover:shadow-[0_0_30px_rgba(249,115,22,0.4)] transition-all w-full md:w-auto flex items-center justify-center gap-2 shadow-lg">
+                <i class="fas fa-download"></i>
+                <span>DOWNLOAD APK</span>
+                <span class="text-xs font-normal opacity-70 ml-1 text-orange-100">(458 MB.)</span>
+            </a>
+            <a href="https://whatsapp.com/channel/0029VbBiw0S2P59hQyYSlP0x" class="bg-kps-panel border border-kps-border text-white px-8 py-4 rounded font-bold text-lg hover:border-kps-orange hover:text-kps-orange transition-all w-full md:w-auto flex items-center justify-center gap-2">
+                <i class="fas fa-user-circle"></i>
+                <span>SALURAN RESMI</span>
+            </a>
+            <a href="https://ffkipas.my.id/verifyuid" class="bg-kps-panel border border-kps-border text-white px-8 py-4 rounded font-bold text-lg hover:border-kps-orange hover:text-kps-orange transition-all w-full md:w-auto flex items-center justify-center gap-2">
+                <i class="fas fa-id-badge"></i>
+                <span>VERIFY ID (BUAT LOGIN)</span>
+            </a>
+        </div>
+
+        <div class="running-text">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                 PRIVATE SERVER BUNDLE NYA GABAKAL KELIHATAN.
+            </marquee>
+        </div>
+    </header>
+
+    <!-- Stats Section & Features Section tetap sama seperti kodingan kamu -->
+
+    <!-- Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // === SISTEM LOGIN + FILTER + MUSIK BACKGROUND ===
+            const loginOverlay = document.getElementById('login-overlay');
+            const usernameInput = document.getElementById('username-input');
+            const loginBtn = document.getElementById('login-btn');
+            const usernameDisplay = document.getElementById('username-display');
+            const logoutBtn = document.getElementById('logout-btn');
+            const errorMessage = document.getElementById('error-message');
+            const warningMessage = document.getElementById('warning-message');
+
+            const bgMusic = document.getElementById('bg-music');
+            const musicToggle = document.getElementById('music-toggle');
+            const musicIcon = document.getElementById('music-icon');
+
+            let isMuted = false;
+
+            // Toggle mute/unmute
+            musicToggle.addEventListener('click', () => {
+                if (bgMusic.paused) {
+                    bgMusic.play();
+                    musicIcon.classList.replace('fa-volume-mute', 'fa-volume-up');
+                } else {
+                    bgMusic.pause();
+                    musicIcon.classList.replace('fa-volume-up', 'fa-volume-mute');
+                }
+            });
+
+            const badWords = [
+                'kontol', 'memek', 'puki', 'pepek', 'anjing', 'asu', 'bangsat', 'babi', 
+                'bajingan', 'brengsek', 'jancuk', 'tai', 'goblok', 'tolol', 'ngentot', 
+                'fuck', 'shit', 'bitch'
+            ];
+
+            const savedUsername = localStorage.getItem('kipasUsername');
+            if (savedUsername) {
+                usernameDisplay.textContent = savedUsername;
+                logoutBtn.classList.remove('hidden');
+                loginOverlay.classList.add('hidden');
+                bgMusic.volume = 0.3;
+                bgMusic.play();
+            }
+
+            function checkBadWord(name) {
+                const lowerName = name.toLowerCase();
+                return badWords.some(word => lowerName.includes(word));
+            }
+
+            function checkNumber(name) {
+                return /\d/.test(name);
+            }
+
+            usernameInput.addEventListener('input', () => {
+                const name = usernameInput.value.trim();
+                errorMessage.style.display = 'none';
+                warningMessage.style.display = 'none';
+
+                if (name && checkNumber(name)) {
+                    warningMessage.style.display = 'block';
+                }
+            });
+
+            loginBtn.addEventListener('click', () => {
+                let name = usernameInput.value.trim();
+                errorMessage.style.display = 'none';
+                warningMessage.style.display = 'none';
+
+                if (name === '') name = 'Player';
+
+                if (checkBadWord(name)) {
+                    errorMessage.style.display = 'block';
+                    usernameInput.value = '';
+                    usernameInput.focus();
+                    return;
+                }
+
+                if (checkNumber(name)) {
+                    warningMessage.style.display = 'block';
+                    usernameInput.focus();
+                    return;
+                }
+
+                // LOGIN BERHASIL → PLAY MUSIK
+                localStorage.setItem('kipasUsername', name);
+                usernameDisplay.textContent = name;
+                logoutBtn.classList.remove('hidden');
+                loginOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loginOverlay.classList.add('hidden');
+                    bgMusic.volume = 0.3;
+                    bgMusic.play().catch(e => console.log("Musik diblokir browser:", e));
+                }, 500);
+            });
+
+            usernameInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') loginBtn.click();
+            });
+
+            logoutBtn.addEventListener('click', () => {
+                localStorage.removeItem('kipasUsername');
+                bgMusic.pause();
+                location.reload();
+            });
+
+            // Mobile menu, partikel, animasi count-up tetap sama seperti kodingan kamu
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+
+            const particlesContainer = document.getElementById('particles-container');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                const size = Math.random() * 5 + 3;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}vw`;
+                const duration = Math.random() * 10 + 10;
+                particle.style.animation = `fall ${duration}s linear infinite`;
+                particle.style.animationDelay = `${Math.random() * 10}s`;
+                particle.style.opacity = Math.random() * 0.6 + 0.3;
+                particlesContainer.appendChild(particle);
+            }
+
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes fall {
+                    0% { transform: translateY(-100vh) translateX(0); }
+                    100% { transform: translateY(100vh) translateX(100px); }
+                }
+            `;
+            document.head.appendChild(style);
+
+            function animateCountUp(element, target) {
+                let count = 0;
+                const increment = target / 200;
+                const interval = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        count = target;
+                        clearInterval(interval);
+                    }
+                    element.textContent = Math.floor(count).toLocaleString('en-US');
+                }, 20);
+            }
+
+            const countElements = document.querySelectorAll('.animate-count');
+            countElements.forEach(el => {
+                const target = parseInt(el.getAttribute('data-target')) || 0;
+                animateCountUp(el, target);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
